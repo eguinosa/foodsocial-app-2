@@ -20,7 +20,7 @@ class HomeState extends State<Home> {
 
   static List<Widget> pages = <Widget>[
     // TODO: Replace with Explore Screen.
-    ExploreScreen(),
+    const ExploreScreen(),
     // TODO: Replace with Recipes Screen.
     RecipesScreen(),
     Container(color: Colors.blue),
