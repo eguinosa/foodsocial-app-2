@@ -1,7 +1,6 @@
 // Gelin Eguinosa
 // 2023
 
-import 'dart:developer';
 import 'package:flutter/material.dart';
 
 import '../api/mock_foodsocial_service.dart';
@@ -9,24 +8,10 @@ import '../components/components.dart';
 import '../models/models.dart';
 
 
-class ExploreScreen extends StatefulWidget {
-
-  const ExploreScreen({super.key});
-
-  @override
-  State<ExploreScreen> createState() => _ExploreScreenState();
-}
-
-class _ExploreScreenState extends State<ExploreScreen> {
-  late ScrollController controller;
+class ExploreScreen extends StatelessWidget {
   final mockService = MockFoodSocialService();
 
-  @override
-  void initState() {
-    controller = ScrollController();
-    controller.addListener(scrollListener);
-    super.initState();
-  }
+  ExploreScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -42,7 +27,6 @@ class _ExploreScreenState extends State<ExploreScreen> {
           return ListView(
             // 6
             scrollDirection: Axis.vertical,
-            controller: controller,
             children: [
               // 7
               TodayRecipeListView(
@@ -65,21 +49,5 @@ class _ExploreScreenState extends State<ExploreScreen> {
         }
       },
     );
-  }
-
-  scrollListener() {
-    if (controller.offset <= controller.position.minScrollExtent &&
-        !controller.position.outOfRange) {
-      log("We are at the top of the ListView in the Explore Screen.");
-    } else if (controller.offset >= controller.position.maxScrollExtent &&
-        !controller.position.outOfRange) {
-      log("We are at the bottom of the ListView in the Explore Screen.");
-    }
-  }
-
-  @override
-  void dispose() {
-    controller.dispose();
-    super.dispose();
   }
 }
