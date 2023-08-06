@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 
 import 'screens/explore_screen.dart';
 import 'screens/recipes_screen.dart';
+import 'screens/grocery_screen.dart';
 
 
 class Home extends StatefulWidget {
@@ -16,14 +17,15 @@ class Home extends StatefulWidget {
 
 
 class HomeState extends State<Home> {
-  int _selectedIndex = 0;
+  int _selectedIndex = 2;
 
   static List<Widget> pages = <Widget>[
-    // TODO: Replace with Explore Screen.
+    // Replace with Explore Screen.
     ExploreScreen(),
-    // TODO: Replace with Recipes Screen.
+    // Replace with Recipes Screen.
     RecipesScreen(),
-    Container(color: Colors.blue),
+    // Replace with Grocery Screen.
+    const GroceryScreen(),
   ];
 
   void _onItemTapped(int index) {
