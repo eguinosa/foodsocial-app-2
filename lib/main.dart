@@ -27,9 +27,9 @@ class FoodSocial2 extends StatelessWidget {
       // Replace this with MultiProvider.
       home: MultiProvider(
         providers: [
-          // 2
           ChangeNotifierProvider(create: (context) => TabManager()),
-          // TODO: Add GroceryManager Provider.
+          // Add GroceryManager Provider.
+          ChangeNotifierProvider(create: (context) => GroceryManager()),
         ],
         child: const Home(),
       ),
