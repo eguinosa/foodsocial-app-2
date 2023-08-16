@@ -1,16 +1,17 @@
-# foodsocial_app_2
+# FoodSocial App 2
 
-A New and More Advanced version of the Food Social App.
+Creating a simple Social Network app for recipes and recipe's creators.
 
-## Getting Started
+![App Tabs](readme_files/app_tabs.png)
 
-This project is a starting point for a Flutter application.
+## Explore Tab
 
-A few resources to get you started if this is your first Flutter project:
+On the explore tab you can find relevant recipes, creators and trends, plus the posts made by the creators that you follow.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## Recipes Tab
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+On the Recipes Tab you can find all the available recipes on the app. 
+
+## To Buy Tab
+
+On the To Buy Tab, you can create a custom list of groceries you need to follow the instructions on one of the recipes.
